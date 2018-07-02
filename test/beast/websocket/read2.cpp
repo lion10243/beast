@@ -29,7 +29,7 @@ public:
         using boost::asio::buffer;
 #if 1
         // suspend on read block
-        doFailLoop([&](test::fail_counter& fc)
+        doFailLoop([&](test::fail_count& fc)
         {
             echo_server es{log};
             boost::asio::io_context ioc;
@@ -62,7 +62,7 @@ public:
 #endif
 
         // suspend on release read block
-        doFailLoop([&](test::fail_counter& fc)
+        doFailLoop([&](test::fail_count& fc)
         {
 //log << "fc.count()==" << fc.count() << std::endl;
             echo_server es{log};
@@ -95,7 +95,7 @@ public:
 
 #if 1
         // suspend on write pong
-        doFailLoop([&](test::fail_counter& fc)
+        doFailLoop([&](test::fail_count& fc)
         {
             echo_server es{log};
             boost::asio::io_context ioc;
@@ -114,7 +114,7 @@ public:
                     if(ec)
                         BOOST_THROW_EXCEPTION(
                             system_error{ec});
-                    BEAST_EXPECT(to_string(b.data()) == s);
+                    BEAST_EXPECT(buffers_to_string(b.data()) == s);
                     ++count;
                 });
             BEAST_EXPECT(ws.rd_block_.is_locked());
@@ -133,7 +133,7 @@ public:
         });
 
         // Ignore ping when closing
-        doFailLoop([&](test::fail_counter& fc)
+        doFailLoop([&](test::fail_count& fc)
         {
             echo_server es{log};
             boost::asio::io_context ioc;
@@ -154,7 +154,7 @@ public:
                     if(ec)
                         BOOST_THROW_EXCEPTION(
                             system_error{ec});
-                    BEAST_EXPECT(to_string(b.data()) == "**");
+                    BEAST_EXPECT(buffers_to_string(b.data()) == "**");
                     BEAST_EXPECT(++count == 1);
                     b.consume(b.size());
                     ws.async_read(b,
@@ -181,7 +181,7 @@ public:
         });
 
         // See if we are already closing
-        doFailLoop([&](test::fail_counter& fc)
+        doFailLoop([&](test::fail_count& fc)
         {
             echo_server es{log};
             boost::asio::io_context ioc;
@@ -256,7 +256,7 @@ public:
                 {
                     ++count;
                     BEAST_EXPECTS(! ec, ec.message());
-                    BEAST_EXPECT(to_string(b.data()) == s);
+                    BEAST_EXPECT(buffers_to_string(b.data()) == s);
                 });
             ioc.run_one();
             es.stream().write_some(
@@ -331,7 +331,7 @@ public:
                 {
                     ++count;
                     BEAST_EXPECTS(! ec, ec.message());
-                    BEAST_EXPECT(to_string(b.data()) == "**");
+                    BEAST_EXPECT(buffers_to_string(b.data()) == "**");
                 });
             ioc.run_one();
             es.stream().write_some(

@@ -114,6 +114,7 @@
            <member><link linkend="beast.ref.boost__beast__http__is_body_reader">is_body_reader</link></member>
            <member><link linkend="beast.ref.boost__beast__http__is_body_writer">is_body_writer</link></member>
            <member><link linkend="beast.ref.boost__beast__http__is_fields">is_fields</link></member>
+           <member><link linkend="beast.ref.boost__beast__http__is_mutable_body_writer">is_mutable_body_writer</link></member>
           </simplelist>
           <bridgehead renderas="sect3">Concepts</bridgehead>
           <simplelist type="vert" columns="1">
@@ -279,6 +280,44 @@
             <member><link linkend="beast.ref.boost__beast__zlib__error">error</link></member>
             <member><link linkend="beast.ref.boost__beast__zlib__Flush">Flush</link></member>
             <member><link linkend="beast.ref.boost__beast__zlib__Strategy">Strategy</link></member>
+          </simplelist>
+        </entry>
+      </row>
+    </tbody>
+  </tgroup>
+  <tgroup cols="2">
+    <colspec colname="a"/>
+    <colspec colname="b"/>
+    <colspec colname="c"/>
+    <thead>
+      <row>
+        <entry valign="center" namest="a" nameend="c">
+          <bridgehead renderas="sect2">Experimental</bridgehead>
+        </entry>
+      </row>
+    </thead>
+    <tbody>
+      <row>
+        <entry valign="top">
+          <bridgehead renderas="sect3">Classes</bridgehead>
+          <simplelist type="vert" columns="1">
+            <member><link linkend="beast.ref.boost__beast__flat_stream">flat_stream</link></member>
+            <member><link linkend="beast.ref.boost__beast__ssl_stream">ssl_stream</link></member>
+            <member><link linkend="beast.ref.boost__beast__http__icy_stream">http::icy_stream</link></member>
+            <member><link linkend="beast.ref.boost__beast__test__fail_count">test::fail_count</link></member>
+            <member><link linkend="beast.ref.boost__beast__test__stream">test::stream</link></member>
+          </simplelist>
+        </entry>
+        <entry valign="top">
+          <bridgehead renderas="sect3">Functions</bridgehead>
+          <simplelist type="vert" columns="1">
+            <member><link linkend="beast.ref.boost__beast__test__connect">test::connect</link></member>
+          </simplelist>
+        </entry>
+        <entry valign="top">
+          <bridgehead renderas="sect3">Constants</bridgehead>
+          <simplelist type="vert" columns="1">
+            <member><link linkend="beast.ref.boost__beast__test__error">test::error</link></member>
           </simplelist>
         </entry>
       </row>

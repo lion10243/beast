@@ -7,6 +7,9 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-int main()
-{
-}
+#if BOOST_BEAST_USE_OPENSSL
+
+// Test that header file is self-contained.
+#include <boost/beast/experimental/core/ssl_stream.hpp>
+
+#endif

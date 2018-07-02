@@ -1,3 +1,74 @@
+Version 174:
+
+* Fix Fields, FieldsWriter concept docs
+* Fix BodyReader constructor requirements doc
+
+--------------------------------------------------------------------------------
+
+Version 173:
+
+* Remove Autobahn testsuite doc note
+* Fix buffers_adapter iterator value type
+* Fix buffers_adapter max_size
+* Fix buffers_prefix iterator decrement
+* buffers_adapter improvements
+* Add icy_stream Shoutcast stream filter
+
+--------------------------------------------------------------------------------
+
+Version 172:
+
+* Tidy up websocket stream javadocs
+* Fix move-only arguments in bind_handler
+* Fix http::parser constructor javadoc
+* Tidy up test::stream javadocs
+* Tidy up composed operation doc
+
+--------------------------------------------------------------------------------
+
+Version 171:
+
+* Add handler_ptr::has_value
+* Remove spurious assert
+* Fix unused variable warning
+
+--------------------------------------------------------------------------------
+
+Version 170:
+
+* Add flat_stream to experimental
+* Add ssl_stream to experimental
+* Add test::error to experimental
+* Add test::fail_count to experimental
+* Add test::stream to experimental
+* Use a shared string for example HTTP server doc roots
+* Remove deprecated serializer::reader_impl()
+* Remove deprecated Body reader and writer ctor signatures
+* Add is_mutable_body_writer metafunction
+* Add const and non-const overloads for message based http writes
+* Use the root certificate which matches the fingerprint
+
+--------------------------------------------------------------------------------
+
+Version 169:
+
+* Use buffers_to_string in tests
+* Use boost::void_t
+* Refactor HTTP write_op implementation
+* Use fully qualified namespace in BOOST_BEAST_HANDLER_INIT
+* New flat_stream example class
+* Use flat_stream in ssl_stream example code
+
+--------------------------------------------------------------------------------
+
+Version 168:
+
+* Use executor_work_guard in composed operations
+* Revert verb.ipp change which caused spurious warnings
+* Fix race in advanced server examples
+
+--------------------------------------------------------------------------------
+
 Version 167:
 
 * Revert: Tidy up calls to post()
@@ -13,7 +84,6 @@ Version 166:
 Version 165:
 
 * Fix BOOST_NO_CXX11_ALLOCATOR check
-* Tidy up a warning
 
 --------------------------------------------------------------------------------
 

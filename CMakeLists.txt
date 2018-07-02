@@ -9,7 +9,7 @@
 
 cmake_minimum_required (VERSION 3.5.1)
 
-project (Beast VERSION 167)
+project (Beast VERSION 174)
 
 set_property (GLOBAL PROPERTY USE_FOLDERS ON)
 option (Beast_BUILD_EXAMPLES "Build examples" ON)
@@ -24,7 +24,7 @@ if (MSVC)
 
     add_compile_options(
         /bigobj       # large object file format
-        /permissive-  # strict C++
+        #/permissive-  # strict C++
         #/wd4503      # decorated name length exceeded, name was truncated
         /W4           # enable all warnings
         /MP           # Multi-processor compilation
