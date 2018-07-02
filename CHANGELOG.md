@@ -1,3 +1,39 @@
+Version 174:
+
+* Fix Fields, FieldsWriter concept docs
+* Fix BodyReader constructor requirements doc
+
+--------------------------------------------------------------------------------
+
+Version 173:
+
+* Remove Autobahn testsuite doc note
+* Fix buffers_adapter iterator value type
+* Fix buffers_adapter max_size
+* Fix buffers_prefix iterator decrement
+* buffers_adapter improvements
+* Add icy_stream Shoutcast stream filter
+
+--------------------------------------------------------------------------------
+
+Version 172:
+
+* Tidy up websocket stream javadocs
+* Fix move-only arguments in bind_handler
+* Fix http::parser constructor javadoc
+* Tidy up test::stream javadocs
+* Tidy up composed operation doc
+
+--------------------------------------------------------------------------------
+
+Version 171:
+
+* Add handler_ptr::has_value
+* Remove spurious assert
+* Fix unused variable warning
+
+--------------------------------------------------------------------------------
+
 Version 170:
 
 * Add flat_stream to experimental
